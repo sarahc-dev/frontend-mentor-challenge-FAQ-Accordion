@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.box {
+  background-color: white;
+  width: 90%;
+  max-width: 1000px;
+  margin: 12em auto 6em;
+  padding: 2em;
+  border-radius: 20px;
+  box-shadow: 0 50px 30px -30px rgba(0, 0, 0, 0.25);
+}
+
+.image-container {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.main-image {
+  position: relative;
+  right: 13px;
+  bottom: 1em;
+}
+
+.shadow {
+  position: relative;
+  bottom: 2em;
+}
+
+h1 {
+  color: hsl(238, 29%, 16%);
+  font-size: 2.7em;
+  text-align: center;
+  margin: 0.25em 0 1em;
+}
+
+.accordion {
+  font-size: 1.1em;
+}
+
+.accordion-item-header {
+  color: hsl(240, 6%, 50%);
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion-item-header:hover,
+.accordion-item-header.active:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.accordion-item-header.active {
+  font-weight: 700;
+  color: hsl(237, 12%, 33%);
+}
+
+.accordion-item-header::after {
+  content: url("images/icon-arrow-down.svg");
+  position: absolute;
+  right: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.accordion-item-header.active::after {
+  transform: rotate(-180deg);
+}
+
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+  color: hsl(240, 6%, 50%);
+}
+
+.accordion-item-body-content {
+  line-height: 1.5em;
+  margin-top: 1em;
+}
+
+hr {
+  border-top: 1px solid hsl(240, 5%, 91%);
+  margin: 1em 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
