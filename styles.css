@@ -28,13 +28,12 @@ img {
   margin: 0 auto;
 }
 
-.box {
-  background-color: white;
+.outer-box {
   width: 90%;
-  max-width: 1000px;
   margin: 12em auto 6em;
-  padding: 2em;
+  background-color: white;
   border-radius: 20px;
+  padding: 2em;
   box-shadow: 0 50px 30px -30px rgba(0, 0, 0, 0.25);
 }
 
@@ -109,6 +108,77 @@ h1 {
 hr {
   border-top: 1px solid hsl(240, 5%, 91%);
   margin: 1em 0;
+}
+
+@media (min-width: 1050px) {
+  .main-image,
+  .shadow {
+    display: none;
+  }
+
+  .outer-box {
+    margin: 9vw auto;
+    width: 80%;
+    max-width: 1000px;
+    padding: 0;
+    min-height: 31.8rem;
+    display: flex;
+    position: relative;
+  }
+
+  .box {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .design {
+    content: url("images/illustration-box-desktop.svg");
+    position: absolute;
+    top: 17em;
+    left: -130px;
+    z-index: 2;
+  }
+
+  .woman-desktop,
+  .background-desktop {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .woman-desktop {
+    top: 4.3rem;
+    left: -5.2rem;
+    z-index: 1;
+    width: 472px;
+    height: 359px;
+    background-image: url("images/illustration-woman-online-desktop.svg");
+  }
+
+  .background-desktop {
+    top: -18.5rem;
+    left: -36rem;
+    width: 966px;
+    height: 945px;
+    z-index: 0;
+    background-image: url("images/bg-pattern-desktop.svg");
+  }
+
+  .faq {
+    width: 40%;
+    margin-top: 5rem;
+    margin-left: 55%;
+  }
+
+  h1 {
+    text-align: left;
+    font-size: 3em;
+  }
+
+  .accordion {
+    font-size: 1.3em;
+  }
 }
 
 .attribution {
